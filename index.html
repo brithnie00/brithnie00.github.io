@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFP: Durian Musang King D197 Growth Modeler</title>
+    
+    <!-- Tailwind CSS for modern premium layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Chart.js for beautiful, responsive interactive animations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- KaTeX for beautiful, lightning-fast LaTeX math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gradient-to-r from-emerald-900 to-emerald-800 text-white shadow-md border-b border-emerald-950">
+        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-400 p-2.5 rounded-xl shadow-inner flex items-center justify-center">
+                    <!-- Durian Leaf SVG -->
+                    <svg class="w-8 h-8 text-emerald-950" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.03 2.5a3 3 0 0 0-4.11 0l-9 9a3 3 0 0 0 0 4.11L5.5 17.1l-2.79 2.79a1 1 0 0 0 1.41 1.41L6.9 18.5l1.49 1.49c1.13 1.13 3 1.13 4.11 0l9-9a3 3 0 0 0 0-4.11l-4.47-4.48zM12.5 13.91l-4-4L15.91 4.5l4 4-7.41 7.41z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-extrabold tracking-tight">SFP: Agro Product Technology</h1>
+                    <p class="text-emerald-200 text-sm font-medium">Applied Calculus in Malaysian Crop Science & Post-Harvest Biophysics</p>
+                </div>
+            </div>
+            <div class="bg-emerald-950/40 backdrop-blur px-4 py-2 rounded-lg border border-emerald-700 text-center md:text-right">
+                <span class="text-xs text-emerald-300 block uppercase tracking-wider font-semibold">Focus Scenario</span>
+                <span class="text-sm font-bold text-amber-300">D197 Musang King Growth Kinetics</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left Column: Equations, Explanations & SFP Context (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+            
+            <!-- Bioscience Scenario Overview Card -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-2.5 py-1 rounded-full">Biological Modeling</span>
+                <h2 class="text-xl font-bold text-slate-900 mt-2.5 mb-3">Durian Fruit Growth Dynamics</h2>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    In Agro Product Technology, mastering the growth kinetics of elite cultivars like <strong>Musang King (D197)</strong> is crucial. By quantifying physical biomass accumulation over <strong>Days After Fruit Set (DAFS)</strong>, we can accurately forecast nutrient assimilation demands, estimate maturity markers, and schedule post-harvest supply chain operations.
+                </p>
+                <div class="border-t border-slate-100 pt-3 text-xs text-slate-500">
+                    <span class="font-bold text-slate-700">Source Database:</span> 
+                    <a href="https://www.researchgate.net/publication/390129018_Investigation_of_biological_characteristics_of_fruit_development_and_physiological_disorders_of_Musang King durian_Durio_zibethinus_Murr" target="_blank" class="text-emerald-600 hover:underline inline-flex items-center font-semibold">
+                        ResearchGate: Musang King Durian Growth Kinetics (2025/2026)
+                        <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mathematical Formulation Card -->
+            <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-lg border border-slate-800">
+                <h3 class="text-md font-bold text-emerald-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <span class="bg-emerald-950 p-1.5 rounded-lg text-emerald-400">f(x)</span>
+                    Mathematical Foundations
+                </h3>
+                
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                    The cumulative weight of the developing durian is modeled using a <strong>Logistic Sigmoid Growth Model</strong>, characterizing the three natural growth phases: <em>Lag</em> (0–28 DAFS), <em>Linear/Exponential</em> (28–70 DAFS), and <em>Stationary/Maturity</em> (70–90 DAFS).
+                </p>
+
+                <!-- Equation 1 -->
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 mb-4 overflow-x-auto">
+                    <span class="text-xs text-emerald-500 block font-semibold uppercase mb-1">Cumulative Fruit Weight Model</span>
+                    <div id="equation-fx" class="text-center py-2 text-md">
+                        $$f(x) = \frac{L}{1 + e^{-k(x - x_0)}}$$
+                    </div>
+                </div>
+
+                <!-- Equation 2 -->
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 mb-4 overflow-x-auto">
+                    <span class="text-xs text-emerald-500 block font-semibold uppercase mb-1">Growth Velocity (First Derivative)</span>
+                    <div id="equation-dfx" class="text-center py-2 text-md">
+                        $$f'(x) = \frac{L \cdot k \cdot e^{-k(x - x_0)}}{(1 + e^{-k(x - x_0)})^2}$$
+                    </div>
+                    <div class="text-center text-xs text-slate-400 mt-2">
+                        Equivalent to: $$f'(x) = k \cdot f(x) \left(1 - \frac{f(x)}{L}\right)$$
+                    </div>
+                </div>
+
+                <!-- Variables Legend -->
+                <div class="grid grid-cols-2 gap-3 text-xs text-slate-400 border-t border-slate-800 pt-4">
+                    <div>
+                        <span class="text-white font-semibold">x:</span> Days After Fruit Set (DAFS)
+                    </div>
+                    <div>
+                        <span class="text-white font-semibold">L (Carrying Capacity):</span> 2160 g
+                    </div>
+                    <div>
+                        <span class="text-white font-semibold">k (Growth Coefficient):</span> 0.09
+                    </div>
+                    <div>
+                        <span class="text-white font-semibold">x₀ (Inflection Point):</span> 49 Days
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Graph & Solver Display (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+            
+            <!-- Interactive Visualizer -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Physiological Growth Simulator</h3>
+                        <p class="text-xs text-slate-500">Click anywhere on the graph or use the timeline slider to audit the growth speed</p>
+                    </div>
+                    <!-- Quick Preset Selectors -->
+                    <div class="flex gap-1">
+                        <button onclick="setTimelinePoint(14)" class="text-xs px-2.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-md hover:bg-amber-100 font-semibold transition">Lag Phase</button>
+                        <button onclick="setTimelinePoint(49)" class="text-xs px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-md hover:bg-emerald-100 font-semibold transition">Peak Speed</button>
+                        <button onclick="setTimelinePoint(85)" class="text-xs px-2.5 py-1 bg-indigo-50 text-indigo-800 border border-indigo-200 rounded-md hover:bg-indigo-100 font-semibold transition">Ripening</button>
+                    </div>
+                </div>
+
+                <!-- Interactive Chart Canvas -->
+                <div class="relative w-full h-[360px] bg-slate-50/50 rounded-xl p-2 border border-slate-100">
+                    <canvas id="growthChart"></canvas>
+                </div>
+
+                <!-- Slider Control -->
+                <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <label for="timelineSlider" class="text-xs font-bold text-slate-600 uppercase tracking-wider whitespace-nowrap">Timeline Audit (DAFS):</label>
+                    <input type="range" id="timelineSlider" min="0" max="90" value="49" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <span id="sliderValue" class="text-sm font-extrabold bg-emerald-600 text-white py-1 px-3 rounded-md min-w-[3.5rem] text-center shadow-sm">49</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Solution and Agronomic Explanation Board -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-6">
+                <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">Real-Time Calculus & Agro-Technical Assessment</h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Mathematical Solution Display -->
+                    <div class="bg-emerald-50/50 p-5 rounded-xl border border-emerald-100/70 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-2">Calculus Solver Output</span>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-500 font-medium">At Selected Time (x):</span>
+                                    <span class="font-bold text-slate-800" id="calc-day">49 Days</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-500 font-medium">Cumulative Weight f(x):</span>
+                                    <span class="font-bold text-emerald-700 text-md" id="calc-weight">1080.00 g</span>
+                                </div>
+                                <div class="flex justify-between text-sm items-center">
+                                    <span class="text-slate-500 font-medium">Growth Velocity f'(x):</span>
+                                    <span class="font-extrabold text-amber-600 text-md inline-flex items-center gap-1" id="calc-velocity">
+                                        48.60 g/day
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-emerald-100/60">
+                            <span class="text-[10px] text-slate-500 font-semibold block uppercase mb-1">Instant Derivative Expansion:</span>
+                            <div id="derivative-workings" class="text-xs text-slate-700 bg-white p-2.5 rounded border border-emerald-100 overflow-x-auto">
+                                f'(49) = 0.09 × 1080.00 × (1 - 1080.00/2160) = 48.60 g/day
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agronomic Insights -->
+                    <div class="bg-amber-50/40 p-5 rounded-xl border border-amber-100/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-xs font-bold text-amber-800 uppercase tracking-wider block">Agro Product Tech Interpretation</span>
+                                <span id="phase-badge" class="text-[10px] bg-amber-200/60 text-amber-900 px-2 py-0.5 rounded font-bold uppercase">Rapid Growth</span>
+                            </div>
+                            <p id="layman-expl" class="text-xs text-slate-600 leading-relaxed font-medium">
+                                At this phase, the fruit is undergoing immense cellular expansion. Structural cellulose and hemicellulose are synthesized rapidly, making this the maximum transport speed of potassium and nitrogen into the developing pulp structure.
+                            </p>
+                        </div>
+                        <div class="bg-amber-100/30 p-3 rounded border border-amber-200/50 mt-4">
+                            <span class="text-[10px] text-amber-950 font-bold block uppercase mb-0.5">Post-Harvest Metric:</span>
+                            <p id="post-harvest-metric" class="text-xs text-amber-900 leading-snug">
+                                Nutrient allocation is at its peak. Drought stress during this exact week can severely cause hollow pulp cavities ("lulus/mangkas") inside the locules.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-bold text-white block">SFP: Agro Product Technology Lab Suite</span>
+                <span>Malaysia Agricultural University / Universiti Agro-Malaysia (Fictionalized Educational Sandbox)</span>
+            </div>
+            <div class="text-center md:text-right">
+                <span>Calculus Derivative Simulator for Biological Systems</span>
+                <span class="block text-slate-500">Built using Chart.js, Tailwind CSS, & KaTeX Math Notation</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script>
+        // Model Constants
+        const L = 2160;   // Carrying capacity / Maximum harvest weight (g)
+        const k = 0.09;   // Growth scaling factor
+        const x0 = 49;    // Inflection point (days)
+
+        // Mathematical Equations
+        function f(x) {
+            return L / (1 + Math.exp(-k * (x - x0)));
+        }
+
+        function df(x) {
+            const fx = f(x);
+            return k * fx * (1 - (fx / L));
+        }
+
+        // Generate Dataset for Graph
+        const xData = [];
+        const yWeight = [];
+        const yVelocity = [];
+
+        for (let day = 0; day <= 90; day++) {
+            xData.push(day);
+            yWeight.push(f(day).toFixed(2));
+            yVelocity.push(df(day).toFixed(2));
+        }
+
+        // DOM Elements
+        const slider = document.getElementById('timelineSlider');
+        const sliderValue = document.getElementById('sliderValue');
+        const calcDay = document.getElementById('calc-day');
+        const calcWeight = document.getElementById('calc-weight');
+        const calcVelocity = document.getElementById('calc-velocity');
+        const workings = document.getElementById('derivative-workings');
+        const laymanExpl = document.getElementById('layman-expl');
+        const phaseBadge = document.getElementById('phase-badge');
+        const postHarvestMetric = document.getElementById('post-harvest-metric');
+
+        // Chart.js Setup
+        const ctx = document.getElementById('growthChart').getContext('2d');
+        let chart;
+
+        function initializeChart() {
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: xData,
+                    datasets: [
+                        {
+                            label: 'Fruit Weight f(x) [grams]',
+                            data: yWeight,
+                            borderColor: '#059669',
+                            backgroundColor: 'rgba(5, 150, 105, 0.05)',
+                            borderWidth: 3,
+                            fill: true,
+                            yAxisID: 'yWeight',
+                            pointRadius: 0,
+                            pointHitRadius: 10,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Growth Velocity f'(x) [g/day]",
+                            data: yVelocity,
+                            borderColor: '#d97706',
+                            borderDash: [5, 5],
+                            borderWidth: 2.5,
+                            fill: false,
+                            yAxisID: 'yVelocity',
+                            pointRadius: 0,
+                            pointHitRadius: 10,
+                            tension: 0.2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    family: "'Plus Jakarta Sans', sans-serif",
+                                    weight: 'bold',
+                                    size: 11
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Days After Fruit Set (DAFS)',
+                                font: {
+                                    family: "'Plus Jakarta Sans', sans-serif",
+                                    weight: 'bold',
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(241, 245, 249, 1)'
+                            }
+                        },
+                        yWeight: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Fruit Weight (grams)',
+                                font: {
+                                    family: "'Plus Jakarta Sans', sans-serif",
+                                    weight: 'bold',
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(241, 245, 249, 1)'
+                            }
+                        },
+                        yVelocity: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Weight Accrual Rate (g/day)',
+                                font: {
+                                    family: "'Plus Jakarta Sans', sans-serif",
+                                    weight: 'bold',
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                drawOnChartArea: false, // only want grid lines for the main Y axis
+                            }
+                        }
+                    },
+                    onClick: (e) => {
+                        const points = chart.getElementsAtEventForMode(e, 'index', { intersect: false }, true);
+                        if (points.length) {
+                            const firstPoint = points[0];
+                            const clickedDay = firstPoint.index;
+                            slider.value = clickedDay;
+                            updateKinetics(clickedDay);
+                        }
+                    }
+                }
+            });
+        }
+
+        // Biological explanation generation logic based on SFP curriculum parameters
+        function updateInterpretations(day, currentW, currentV) {
+            let explanation = "";
+            let badgeText = "";
+            let postHarvestStr = "";
+            let colorClasses = { bg: "", border: "", text: "" };
+
+            if (day < 28) {
+                badgeText = "Lag Phase (Cell Division)";
+                explanation = `At Day ${day}, the newly fertilized Musang King embryo is undergoing high-frequency mitotic cell division rather than weight accumulation. Growth rate is low (f'(x) = ${currentV} g/day) because cells are very small. Photosynthate input is primarily used for structural development of the rind cell layers.`;
+                postHarvestStr = "Critical irrigation period. Poor water supply in the orchard at this stage will stunt fruit skin size, eventually limiting the final maximum edible pulp content.";
+            } else if (day >= 28 && day <= 70) {
+                badgeText = "Linear Phase (Cell Expansion)";
+                if (day > 45 && day < 53) {
+                    badgeText = "Peak Speed (Growth Velocity Maxima)";
+                    explanation = `At Day ${day}, the fruit is at its maximum absolute growth rate (f'(${day}) ≈ 48.6 g/day). Cellular storage structures (vacuoles) are expanding at extreme rates. Starch synthesis and lipid conversion in the aril are operating at peak transport capacities. This represents the inflection point of the sigmoid curve.`;
+                    postHarvestStr = "Maximum potassium fertilization demand. Agro-technicians must monitor leaf nitrogen ratios to maintain rapid, continuous nutrient mobilization into the locules.";
+                } else {
+                    explanation = `At Day ${day}, cell elongation and enlargement are driving the weight up at ${currentV} grams per day. The aril (flesh) starts solidifying and accumulating starch, preparing for the future rich yellow color. Water transport is fast.`;
+                    postHarvestStr = "Pulp cavity formation period. Adequate phosphorus levels are required now to promote healthy seed maturation and minimize seed abortion.";
+                }
+            } else {
+                badgeText = "Ripening & Maturity Phase";
+                explanation = `At Day ${day}, the absolute growth velocity declines steeply down to f'(x) = ${currentV} g/day as weight plateaus. The plant stops adding active structural mass. Biomass is instead shifted towards ripening biochemistry: starch-to-sugar hydrolyzation, synthesis of aromatic sulfur volatile organic compounds, and organic acid reduction.`;
+                postHarvestStr = "Harvest index optimization window. Harvesting when growth velocity drops close to zero ensures maximum sugar/solids ratio, producing the signature bitter-sweet Musang King flavor.";
+            }
+
+            phaseBadge.innerText = badgeText;
+            laymanExpl.innerText = explanation;
+            postHarvestMetric.innerText = postHarvestStr;
+        }
+
+        // Update Kinetics Elements
+        function updateKinetics(day) {
+            const currentW = f(day);
+            const currentV = df(day);
+
+            // Update DOM Numbers
+            slider.value = day;
+            sliderValue.innerText = day;
+            calcDay.innerText = `${day} DAFS`;
+            calcWeight.innerText = `${currentW.toFixed(2)} g`;
+            calcVelocity.innerText = `${currentV.toFixed(2)} g/day`;
+
+            // Update Equation Workings (Format utilizing KaTeX block)
+            const textString = `f'(${day}) = 0.09 \\times ${currentW.toFixed(2)} \\times \\left(1 - \\frac{${currentW.toFixed(2)}}{2160}\\right) = ${currentV.toFixed(2)} \\text{ g/day}`;
+            workings.innerHTML = '';
+            katex.render(textString, workings, {
+                throwOnError: false,
+                displayMode: false
+            });
+
+            // Update Bio interpretations
+            updateInterpretations(day, currentW, currentV);
+
+            // Move the custom vertical line on the chart to spotlight the selected day
+            updateChartSpotlight(day);
+        }
+
+        function updateChartSpotlight(day) {
+            if (!chart) return;
+            
+            // Build custom plugin to draw selected timeline line
+            chart.config.options.plugins.annotation = {
+                annotations: {
+                    line1: {
+                        type: 'line',
+                        xMin: day,
+                        xMax: day,
+                        borderColor: 'rgba(217, 119, 6, 0.4)',
+                        borderWidth: 2,
+                        label: {
+                            enabled: true,
+                            content: `Day ${day}`,
+                            position: 'center'
+                        }
+                    }
+                }
+            };
+            chart.update('none'); // Update without full redraw animation loop to keep it smooth
+        }
+
+        // Timeline Slider Event Listener
+        slider.addEventListener('input', (e) => {
+            updateKinetics(parseInt(e.target.value));
+        });
+
+        // Set timeline day programmatically via quick buttons
+        window.setTimelinePoint = function(day) {
+            updateKinetics(day);
+        };
+
+        // Window Onload initialization
+        window.onload = function() {
+            initializeChart();
+            updateKinetics(49); // Init default value at Peak Speed Inflection Point
+        };
+    </script>
+</body>
+</html>
